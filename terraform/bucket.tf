@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "bucket" {
-  bucket        = "ia-automatizacion-jose-manuel-bucket"
+  bucket        = "ia-automatizacion-jose-manuel-bucket-dynamo"
   force_destroy = true
 
   tags = {
