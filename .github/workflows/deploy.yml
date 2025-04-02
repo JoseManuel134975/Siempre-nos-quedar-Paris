@@ -9,6 +9,7 @@ on:
         options:
           - deploy
           - deploy-backend
+          - deploy-with-dynamo
 
 jobs:
   deploy:
@@ -89,7 +90,7 @@ jobs:
         run: terraform apply -auto-approve
 
   deploy-with-dynamo:
-    if: ${{ github.event.inputs.job == 'deploy' }}
+    if: ${{ github.event.inputs.job == 'deploy-with-dynamo' }}
     runs-on: ubuntu-latest
     # needs: deploy
 
