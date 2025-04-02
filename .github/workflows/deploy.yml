@@ -91,6 +91,7 @@ jobs:
   deploy-with-dynamo:
     if: ${{ github.event.inputs.job == 'deploy' }}
     runs-on: ubuntu-latest
+    needs: deploy
 
     env:
       aws_region: us-east-1
