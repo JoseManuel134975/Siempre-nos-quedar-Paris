@@ -9,6 +9,7 @@ on:
         options:
           - deploy
           - deploy-backend
+          - deploy-with-dynamo
 
 jobs:
   deploy:
