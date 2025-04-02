@@ -88,6 +88,7 @@ resource "aws_s3_object" "object-upload" {
   }, regex("^.*\\.([a-z]+)$", each.key)[0], "application/octet-stream")
 }
 
+
 # resource "aws_s3_object" "object-upload-js" {
 #   for_each = fileset("./web/src", "*.js")
 #   bucket = aws_s3_bucket.bucket.id
