@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket         = aws_s3_bucket.bucket.bucket
+    bucket         = "ia-automatizacion-jose-manuel-bucket"
     key            = "./terraform/terraform.tfstate"  # Ruta del estado dentro del bucket
     region         = "us-east-1"                  # Región del bucket
     dynamodb_table = "terraform-lock"             # Nombre de la tabla DynamoDB (solo si usas DynamoDB)
