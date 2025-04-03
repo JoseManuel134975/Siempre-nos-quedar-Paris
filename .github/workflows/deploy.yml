@@ -2,14 +2,6 @@ name: Deploy Terraform in AWS
 
 on:
   workflow_dispatch:
-    inputs:
-      job:
-        required: true
-        type: choice
-        options:
-          - deploy
-          - deploy-backend
-          - deploy-with-dynamo
 
 jobs:
   deploy:

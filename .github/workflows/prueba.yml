@@ -1,4 +1,4 @@
-name: Deploy Terraform in AWS
+name: Prueba simultanea
 
 on:
   workflow_dispatch:
