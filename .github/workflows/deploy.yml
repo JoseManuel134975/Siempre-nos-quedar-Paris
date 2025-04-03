@@ -100,15 +100,15 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Initialize Terraform
-        working-directory: ./terraform
+        working-directory: ./job-1
         run: terraform init
 
       - name: Terraform plan
-        working-directory: ./terraform
+        working-directory: ./job-1
         run: terraform plan
 
       - name: Terraform apply
-        working-directory: ./terraform
+        working-directory: ./job-1
         run: terraform apply -auto-approve
 
   job-prueba-2:
@@ -134,14 +134,14 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Initialize Terraform
-        working-directory: ./terraform
+        working-directory: ./job-2
         run: terraform init
 
       - name: Terraform plan
-        working-directory: ./terraform
+        working-directory: ./job-2
         run: terraform plan
 
       - name: Terraform apply
-        working-directory: ./terraform
+        working-directory: ./job-2
         run: terraform apply -auto-approve
   
