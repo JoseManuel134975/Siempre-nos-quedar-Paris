@@ -29,6 +29,10 @@ jobs:
         working-directory: ./job-1
         run: terraform init
 
+      - name: Refresh terraform state
+        working-directory: ./job-1
+        run: terraform refresh
+
       - name: Terraform plan
         working-directory: ./job-1
         run: terraform plan
@@ -61,6 +65,10 @@ jobs:
       - name: Initialize Terraform
         working-directory: ./job-2
         run: terraform init
+
+      - name: Refresh terraform state
+        working-directory: ./job-2
+        run: terraform refresh
 
       - name: Terraform plan
         working-directory: ./job-2
