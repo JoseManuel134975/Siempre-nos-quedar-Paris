@@ -1,0 +1,7 @@
+aws_region    = "us-east-1"
+# ami_id        = "ami-064519b8c76274859"
+# instance_type = "t2.micro"
+name          = "bucket-s3-jose-manuel"
+access_key    = "ASIAXUK5NAAK45ARBM3D"
+secret_key    = "dQGm2Yloulxj0In1Tv2TIuWC1v/unT0KdwfYYioY"
+session_token = "IQoJb3JpZ2luX2VjEIP//////////wEaCXVzLXdlc3QtMiJHMEUCIEJr+CQvpOVZjicOPyniJN4VdWvX5O2ovV9kBWjR8UmdAiEA8nzPVOK2YxhASfihjtDWbwWXsRdUJdt9X9NkRhjMvBsqrwII7P//////////ARABGgw1MjQ3MTg3NjgxNDkiDFhbygz6hDoLR5aJDyqDAqzZTEltK1WKlhuCQAQOl7CnEDC9/F47/5beuxe1CFyK4Q2JlcnZYe/B7bx4o/kI7aD4c9yxL1OaCwqqcA+ua+t4DWMoOTjc2OEmFMJ2+MK5EJlyErflbPcp0zK6u0pdy0HegjJFq3fSM05FejY5kd97bpMd4+n4cChIv1LM9f5oxf0pi9S6W6WOz0l5y5ljtGF9hhiYONs6txR5DwEvVmd4Rl1SJv8YVRRcmIM31uRHUCFYAYauQ5aKjvR7PyPvKgNQKbSnmYvGCT+72i22QRiWUPyLF8ojAYL8AW0o4UvfRnZlM0GfKBCjEJy6awZbRtU+DLbzZjT00DUU9iPrfxfyKm4wjNK5vwY6nQGd9yua2p9DOuW8axXrXsdE9K2NS/PaEBwdWE/4JyZJp4Fm7mBfBKn752SLih8kCrdPBvWWBroTDXOi/CJaByZx6cv8L5LWwu+GaYDUCZJD7uqrsCDmlRWor2u5os4d4HBXYNZTBXV3rnGW3NDGqXcebs9xUVq6oILJs0jM0t5EhXoyDSG3a8goIgKCNsZzXDwoytDFaUx3g1bQud0R"
