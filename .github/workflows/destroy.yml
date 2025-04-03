@@ -13,6 +13,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Copy backend.tf
+        run: cp ./backend.tf ./terraform/backend.tf
+
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
