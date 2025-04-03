@@ -32,10 +32,6 @@ jobs:
         working-directory: ./prueba
         run: terraform init
 
-      - name: Terraform plan
-        working-directory: ./prueba
-        run: terraform plan
-
       - name: Terraform apply
         working-directory: ./prueba
         run: terraform apply -auto-approve
@@ -68,10 +64,6 @@ jobs:
       - name: Initialize Terraform
         working-directory: ./prueba
         run: terraform init
-
-      - name: Terraform plan
-        working-directory: ./prueba
-        run: terraform plan
 
       - name: Terraform apply
         working-directory: ./prueba
