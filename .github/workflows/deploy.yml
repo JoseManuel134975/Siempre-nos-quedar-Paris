@@ -48,6 +48,9 @@ jobs:
       aws_region: us-east-1
 
     steps:
+      - name: Copy backend.tf
+        run: cp ./backend.tf ./terraform
+        
       - name: Checkout repository
         uses: actions/checkout@v4
 
