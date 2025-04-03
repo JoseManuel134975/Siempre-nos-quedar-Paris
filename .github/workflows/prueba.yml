@@ -1,4 +1,4 @@
-name: Prueba simultanea
+name: terraform simultanea
 
 on:
   workflow_dispatch:
@@ -29,15 +29,15 @@ jobs:
         run: aws s3 cp s3://ia-automatizacion-jose-manuel-bucket/terraform.tfstate terraform/terraform.tfstate
 
       - name: Initialize Terraform
-        working-directory: ./prueba
+        working-directory: ./terraform
         run: terraform init
 
       - name: Terraform plan
-        working-directory: ./prueba
+        working-directory: ./terraform
         run: terraform plan
 
       - name: Terraform apply
-        working-directory: ./prueba
+        working-directory: ./terraform
         run: terraform apply -auto-approve
 
 
@@ -66,13 +66,13 @@ jobs:
         run: aws s3 cp s3://ia-automatizacion-jose-manuel-bucket/terraform.tfstate terraform/terraform.tfstate
 
       - name: Initialize Terraform
-        working-directory: ./prueba
+        working-directory: ./terraform
         run: terraform init
 
       - name: Terraform plan
-        working-directory: ./prueba
+        working-directory: ./terraform
         run: terraform plan
 
       - name: Terraform apply
-        working-directory: ./prueba
+        working-directory: ./terraform
         run: terraform apply -auto-approve
