@@ -48,8 +48,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Move backend.tf to /terraform
-        run: cp ./backend.tf ./terraform
+      - name: Move files for deploy backend
+        run: | 
+          cp ./terraform/main.tf ./main.tf
+          cp ./terraform/variables.tf ./variables.tf
+          cp ./terraform/terraform.tfvars ./terraform.tfvars
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -63,13 +66,13 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Initialize Terraform
-        working-directory: ./terraform
+        working-directory: ./
         run: terraform init
 
       - name: Terraform plan
-        working-directory: ./terraform
+        working-directory: ./
         run: terraform plan
 
       - name: Terraform apply
-        working-directory: ./terraform
+        working-directory: ./
         run: terraform apply -auto-approve
