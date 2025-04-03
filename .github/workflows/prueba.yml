@@ -1,4 +1,4 @@
-name: terraform simultanea
+name: Prueba simultanea
 
 on:
   workflow_dispatch:
@@ -26,18 +26,18 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Download Terraform State
-        run: aws s3 cp s3://ia-automatizacion-jose-manuel-bucket/terraform.tfstate terraform/terraform.tfstate
+        run: aws s3 cp s3://ia-automatizacion-jose-manuel-bucket/terraform.tfstate prueba/terraform.tfstate
 
       - name: Initialize Terraform
-        working-directory: ./terraform
+        working-directory: ./prueba
         run: terraform init
 
       - name: Terraform plan
-        working-directory: ./terraform
+        working-directory: ./prueba
         run: terraform plan
 
       - name: Terraform apply
-        working-directory: ./terraform
+        working-directory: ./prueba
         run: terraform apply -auto-approve
 
 
@@ -63,16 +63,16 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Download Terraform State
-        run: aws s3 cp s3://ia-automatizacion-jose-manuel-bucket/terraform.tfstate terraform/terraform.tfstate
+        run: aws s3 cp s3://ia-automatizacion-jose-manuel-bucket/terraform.tfstate prueba/terraform.tfstate
 
       - name: Initialize Terraform
-        working-directory: ./terraform
+        working-directory: ./prueba
         run: terraform init
 
       - name: Terraform plan
-        working-directory: ./terraform
+        working-directory: ./prueba
         run: terraform plan
 
       - name: Terraform apply
-        working-directory: ./terraform
+        working-directory: ./prueba
         run: terraform apply -auto-approve
