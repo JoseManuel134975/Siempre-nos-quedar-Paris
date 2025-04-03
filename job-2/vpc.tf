@@ -1,7 +1,3 @@
-provider "aws" {
-  region = "us-east-1"  # Cambia a la región que necesites
-}
-
 # VPC 2
 resource "aws_vpc" "second_vpc" {
   cidr_block = "10.1.0.0/16"  # Cambié el CIDR block para no chocar con la VPC anterior
