@@ -49,7 +49,7 @@ jobs:
 
     steps:
       - name: Copy backend.tf
-        run: cp ./backend.tf ./terraform/backend.tf
+        run: cp backend.tf terraform/backend.tf
         
       - name: Checkout repository
         uses: actions/checkout@v4
