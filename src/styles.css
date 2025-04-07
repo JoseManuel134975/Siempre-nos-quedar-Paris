@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a {
@@ -15,6 +15,9 @@ a {
 
 /* HEADER */
 header {
+  background-image: url(./img/header_bg.svg);
+  background-repeat: no-repeat;
+  background-position: right;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -31,10 +34,6 @@ header {
   justify-content: space-around;
   align-items: center;
   animation: fromUp 1.25s linear 0s;
-  background-color: mediumslateblue;
-  padding: 15px;
-  width: 100%;
-  box-shadow: 0 0 10px black;
 }
 
 .header__menu nav {
@@ -61,7 +60,6 @@ header {
 
 .header__info img {
   width: 300px;
-  border-radius: 10px;
 }
 
 .header__info .info__getAccount {
@@ -113,12 +111,6 @@ header {
 .flip-card {
   perspective: 1000px;
   width: 30%;
-}
-
-.flip-card img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
 }
 
 .flip-card-inner {
@@ -275,9 +267,9 @@ header {
 }
 
 /* .viveLaExp .viveLaExp__grid figure img{
-    width: 500px;
-    height: 250px;
-  } */
+  width: 500px;
+  height: 250px;
+} */
 
 .viveLaExp > .viveLaExp__grid > figure:first-child {
   grid-column: 1;
@@ -334,9 +326,9 @@ header {
 }
 
 /* FOOTER */
-footer {
+footer{
   width: 100%;
-  background-color: mediumslateblue;
+  background-color: purple;
   padding: 50px;
   text-align: center;
   display: flex;
@@ -344,40 +336,17 @@ footer {
   gap: 30px;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(-45deg, #6a5acd, #ff6f61, #6a5acd);
-  background-size: 400% 400%;
-  animation: bgMove 15s ease infinite;
 }
 
-.header__menu nav a {
-  opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeDown 0.75s ease forwards;
-}
-
-.header__menu nav a:nth-child(1) {
-  animation-delay: 0.2s;
-}
-.header__menu nav a:nth-child(2) {
-  animation-delay: 0.4s;
-}
-.header__menu nav a:nth-child(3) {
-  animation-delay: 0.6s;
-}
-.header__menu nav a:last-child {
-  animation-delay: 0.8s;
-}
-
-.footer__title {
+.footer__title{
   font-size: 2.5em;
 }
 
-footer form {
+footer form{
   width: 100%;
 }
 
-footer form input,
-footer form select {
+footer form input, footer form select{
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -386,25 +355,21 @@ footer form select {
   margin: 5px;
 }
 
-footer form #submit {
+footer form #submit{
   background-color: black;
   color: white;
   transition: all 0.5s linear;
 }
 
-footer form #submit:hover {
+footer form #submit:hover{
   background-color: transparent;
 }
 
-footer form #name:hover,
-footer form #email:hover,
-footer form select:hover {
+footer form #name:hover, footer form #email:hover, footer form select:hover{
   box-shadow: 0 0 30px black;
 }
 
-footer form #name:focus,
-footer form #email:focus,
-footer form select:focus {
+footer form #name:focus, footer form #email:focus, footer form select:focus{
   border: 1px solid white;
   box-shadow: inset 0 0 0 1px;
 }
@@ -413,7 +378,7 @@ footer form select:focus {
 @keyframes fromUp {
   from {
     opacity: 50%;
-    transform: translateY(-250%);
+    transform: translateY(-150%);
   }
   to {
     opacity: 100%;
@@ -443,29 +408,19 @@ footer form select:focus {
   }
 }
 
-@keyframes bgMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes fadeDown {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  header {
+    background-size: 70%;
+    background-position: top right;
+  }
+
   header .header__menu {
     font-size: 0.6em;
+  }
+
+  .header__menu img {
+    width: 100px;
   }
 
   .header__info {
@@ -477,7 +432,7 @@ footer form select:focus {
   }
 
   .info__img img {
-    width: 200px;
+    width: 150px;
   }
 
   .queEs .queEs__articles {
@@ -488,15 +443,6 @@ footer form select:focus {
   .queEs .queEs__articles .queEs__text {
     margin-top: 400px;
     align-items: center;
-  }
-
-  .queEs .queEs__articles .flip-card {
-    background-color: red;
-  }
-
-  .queEs .queEs__articles .flip-card img {
-    width: 200px;
-    height: 400px;
   }
 
   .nucleusEsSeguro .section__title--nucleus {
@@ -586,6 +532,7 @@ footer form select:focus {
 
   header .header__menu {
     font-size: 0.3em;
+    flex-direction: column;
     align-items: center;
     gap: 20px;
   }
@@ -593,10 +540,6 @@ footer form select:focus {
   .header__menu nav {
     background-color: mediumslateblue;
     padding: 10px;
-  }
-
-  .header__menu nav a {
-    font-size: 2.5em;
   }
 
   .header__menu img {
@@ -617,11 +560,10 @@ footer form select:focus {
 
   .header__info .info__getAccount a {
     width: 75%;
-    font-size: 2em;
   }
 
   .info__img img {
-    width: 150px;
+    width: 100px;
   }
 
   .queEs .queEs__articles .flip-card {
@@ -735,18 +677,17 @@ footer form select:focus {
     font-size: 2em;
   }
 
-  footer .footer__title {
+  footer .footer__title{
     font-size: 1.5em;
   }
 
-  footer form {
+  footer form{
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
 
-  footer form input,
-  footer form select {
+  footer form input, footer form select{
     width: 100%;
   }
 }
